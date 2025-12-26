@@ -50,7 +50,7 @@ export const Projects: React.FC = () => {
       title: 'Olist Retail & E-commerce',
       type: 'Growth Analytics',
       tags: ['Python', 'SQL', 'Power BI'],
-      image: 'https://private-user-images.githubusercontent.com/128074557/490479257-9a2ee109-1e2c-4649-b385-593d5839861a.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjY3NTk1MzgsIm5iZiI6MTc2Njc1OTIzOCwicGF0aCI6Ii8xMjgwNzQ1NTcvNDkwNDc5MjU3LTlhMmVlMTA5LTFlMmMtNDY0OS1iMzg1LTU5M2Q1ODM5ODYxYS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMjI2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTIyNlQxNDI3MThaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT03ZDhiOTdlODBmYzMwMzU2MTlmZDE3OWM2ODNlNTU3NmEyZGU0NGZmZWE0YTY1NWU5Mzg1Y2RjMzkyNjA3NmQ4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.mG4xp08bt8pMjqrn7sfMS9bq-uOiKwqY20l34CYkk4I',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800',
       link: 'https://github.com/ahmad-bsds/OlistAnalytics'
     },
     {
