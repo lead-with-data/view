@@ -3,42 +3,44 @@ import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 
 export const Projects: React.FC = () => {
-  const projects = [
+  const designProjects = [
     {
       id: '1',
       title: 'Aura Network',
       type: 'Case Study',
       tags: ['Branding', 'Web3'],
       image: 'https://images.unsplash.com/photo-1614850523296-e8c0d9936bb8?auto=format&fit=crop&q=80&w=800',
-      color: '#FF5C00'
-    },
+    }
+  ];
+
+  const infoProjects = [
     {
       id: '2',
       title: 'Echo Labs',
       type: 'Visual Identity',
       tags: ['UI Design', 'App'],
       image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=800',
-      color: '#00D1FF'
-    },
+    }
+  ];
+
+  const dataProjects = [
     {
       id: '3',
       title: 'Nova SaaS',
       type: 'Product Design',
       tags: ['B2B', 'React'],
       image: 'https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&q=80&w=800',
-      color: '#C9FF4D'
     }
   ];
 
-  return (
-    <div>
+  const ProjectSection = ({ title, projects }: { title: string, projects: any[] }) => (
+    <div className="mb-32">
       <div className="flex items-end justify-between mb-16">
-        <h2 className="text-7xl lg:text-9xl font-black tracking-tighter uppercase leading-[0.85]">
-          SELECTED <br />
-          <span className="text-outline">WORKS</span>
+        <h2 className="text-6xl lg:text-8xl font-black tracking-tighter uppercase leading-[0.85]">
+          {title}
         </h2>
         <a href="#" className="hidden md:flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-neutral-500 hover:text-white transition-colors border-b border-neutral-800 pb-2">
-          View Archive (24)
+          View Archive
         </a>
       </div>
 
@@ -49,7 +51,7 @@ export const Projects: React.FC = () => {
               <img src={p.image} alt={p.title} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </div>
-            
+
             <div className="flex-1 flex flex-col justify-center text-center md:text-left">
               <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-4">
                 {p.tags.map(tag => (
@@ -68,6 +70,14 @@ export const Projects: React.FC = () => {
           </div>
         ))}
       </div>
+    </div>
+  );
+
+  return (
+    <div>
+      <ProjectSection title="DESIGN" projects={designProjects} />
+      <ProjectSection title="INFORMATION DESIGN AND ANALYTICS" projects={infoProjects} />
+      <ProjectSection title="DATA SCIENCE" projects={dataProjects} />
     </div>
   );
 };

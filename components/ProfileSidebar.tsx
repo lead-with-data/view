@@ -1,6 +1,7 @@
 
 import React from 'react';
-import { Github, Twitter, Linkedin, Mail, ArrowUpRight, CheckCircle2 } from 'lucide-react';
+import { Github, Linkedin, Mail, ArrowUpRight, CheckCircle2 } from 'lucide-react';
+import profileImage from '../assets/image.png';
 
 export const ProfileSidebar: React.FC = () => {
   return (
@@ -13,9 +14,9 @@ export const ProfileSidebar: React.FC = () => {
 
       <div className="relative w-full aspect-[4/5] mt-8 mb-8 group">
         <div className="absolute inset-0 bg-neutral-100 rounded-[2rem] overflow-hidden">
-          <img 
-            src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=800" 
-            alt="Profile" 
+          <img
+            src={profileImage}
+            alt="Profile"
             className="w-full h-full object-cover grayscale brightness-110 group-hover:scale-105 transition-transform duration-700"
           />
         </div>
@@ -24,32 +25,36 @@ export const ProfileSidebar: React.FC = () => {
       </div>
 
       <div className="text-center w-full">
-        <h1 className="text-4xl font-extrabold mb-1 tracking-tight leading-none">YOUR NAME</h1>
+        <h1 className="text-4xl font-extrabold mb-1 tracking-tight leading-none">MUHAMMAD AHMAD</h1>
         <p className="text-neutral-400 font-semibold text-sm mb-6 uppercase tracking-widest">Design Engineer</p>
-        
+
         <div className="w-full h-[1px] bg-neutral-100 mb-6"></div>
 
-        <p className="text-neutral-500 text-[15px] leading-relaxed mb-8 px-4 font-medium">
-          Crafting high-performance digital experiences that bridge the gap between aesthetics and function.
+        <p className="text-neutral-500 text-[15px] leading-relaxed mb-8 px-4 font-medium text-justify">
+          Aspiring HCI Researcher committed to the intersection of human behavior and data-driven product growth. By integrating UI/UX design with Data Science, I specialize in researching most rewarding user experiences, utilizing mixed methods to define the 'what' and the 'why' behind products that resonate at scale.
         </p>
       </div>
 
       <div className="w-full space-y-3 mb-8">
-        <button className="w-full bg-black text-white rounded-2xl py-4 flex items-center justify-center gap-2 font-bold hover:bg-[#FF5C00] transition-all group">
+        <a href="mailto:ahmad.bsds@gmail.com" className="w-full bg-black text-white rounded-2xl py-4 flex items-center justify-center gap-2 font-bold hover:bg-[#FF5C00] transition-all group">
           Hire Me
           <ArrowUpRight size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-        </button>
+        </a>
         <button className="w-full border border-neutral-200 text-black rounded-2xl py-4 font-bold hover:bg-neutral-50 transition-all">
           Download CV
         </button>
       </div>
 
       <div className="flex gap-2 mt-auto">
-        {[Github, Twitter, Linkedin, Mail].map((Icon, i) => (
-          <a key={i} href="#" className="w-10 h-10 flex items-center justify-center rounded-xl bg-neutral-50 text-neutral-400 hover:text-[#FF5C00] hover:bg-neutral-100 transition-all">
-            <Icon size={18} />
-          </a>
-        ))}
+        <a href="https://github.com/lead-with-data" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-xl bg-neutral-50 text-neutral-400 hover:text-[#FF5C00] hover:bg-neutral-100 transition-all">
+          <Github size={18} />
+        </a>
+        <a href="https://www.linkedin.com/in/ahmad-bsds/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-xl bg-neutral-50 text-neutral-400 hover:text-[#FF5C00] hover:bg-neutral-100 transition-all">
+          <Linkedin size={18} />
+        </a>
+        <a href="mailto:ahmad.bsds@gmail.com" className="w-10 h-10 flex items-center justify-center rounded-xl bg-neutral-50 text-neutral-400 hover:text-[#FF5C00] hover:bg-neutral-100 transition-all">
+          <Mail size={18} />
+        </a>
       </div>
     </div>
   );

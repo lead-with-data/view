@@ -10,11 +10,11 @@ export const ContactForm: React.FC = () => {
         <span className="text-outline">CONTACT</span>
       </h2>
 
-      <form className="max-w-4xl space-y-12" onSubmit={(e) => e.preventDefault()}>
+      <form className="max-w-4xl space-y-12" action="mailto:ahmad.bsds@gmail.com" method="post" encType="text/plain">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="relative group">
-            <input 
-              type="text" 
+            <input
+              type="text"
               className="w-full bg-transparent border-b border-neutral-800 py-4 outline-none focus:border-[#FF5C00] transition-all text-xl font-medium peer"
               placeholder=" "
             />
@@ -24,8 +24,8 @@ export const ContactForm: React.FC = () => {
           </div>
 
           <div className="relative group">
-            <input 
-              type="email" 
+            <input
+              type="email"
               className="w-full bg-transparent border-b border-neutral-800 py-4 outline-none focus:border-[#FF5C00] transition-all text-xl font-medium peer"
               placeholder=" "
             />
@@ -36,7 +36,7 @@ export const ContactForm: React.FC = () => {
         </div>
 
         <div className="relative group">
-          <textarea 
+          <textarea
             rows={4}
             className="w-full bg-transparent border-b border-neutral-800 py-4 outline-none focus:border-[#FF5C00] transition-all text-xl font-medium peer resize-none"
             placeholder=" "

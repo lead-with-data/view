@@ -20,22 +20,22 @@ export const Hero: React.FC = () => {
             <Sparkles size={14} className="text-[#FF5C00]" />
             <span className="text-[10px] font-bold uppercase tracking-[0.2em]">Based in London, UK</span>
           </div>
-          
+
           <h2 className="text-8xl lg:text-[140px] font-black leading-[0.85] tracking-tighter uppercase mb-12">
             DESIGN <br />
             <span className="text-outline">ENGINEER</span>
           </h2>
-          
+
           <div className="flex flex-col md:flex-row gap-12 md:items-end justify-between">
             <p className="text-neutral-400 text-xl max-w-lg leading-relaxed font-medium">
               I collaborate with forward-thinking companies to build immersive digital experiences that matter.
             </p>
-            
+
             <div className="flex gap-4">
               <div className="flex -space-x-3">
-                {[1,2,3].map(i => (
+                {[1, 2, 3].map(i => (
                   <div key={i} className="w-12 h-12 rounded-full border-2 border-[#050505] overflow-hidden bg-neutral-800">
-                    <img src={`https://i.pravatar.cc/100?img=${i+10}`} alt="Client" />
+                    <img src={`https://i.pravatar.cc/100?img=${i + 10}`} alt="Client" />
                   </div>
                 ))}
               </div>
@@ -58,7 +58,7 @@ export const Hero: React.FC = () => {
           </div>
           <div>
             <span className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-2 block">Service 01</span>
-            <h4 className="text-4xl font-extrabold uppercase leading-none tracking-tighter">Strategic <br />UI Design</h4>
+            <h4 className="text-4xl font-extrabold uppercase leading-none tracking-tighter">HCI <br />Research</h4>
           </div>
         </div>
 
@@ -71,7 +71,7 @@ export const Hero: React.FC = () => {
           </div>
           <div>
             <span className="text-[10px] font-black uppercase tracking-[0.3em] text-black/40 mb-2 block">Service 02</span>
-            <h4 className="text-4xl font-extrabold uppercase leading-none tracking-tighter">Web3 & <br />Product Dev</h4>
+            <h4 className="text-4xl font-extrabold uppercase leading-none tracking-tighter">UI/UX <br />Design</h4>
           </div>
         </div>
       </div>
