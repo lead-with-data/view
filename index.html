@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +8,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --accent: #FF5C00;
             --accent-soft: rgba(255, 92, 0, 0.1);
         }
-        html, body {
+
+        html,
+        body {
             font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: #050505;
             color: #FFFFFF;
@@ -23,37 +26,58 @@
             width: 100%;
             position: relative;
         }
+
         .text-outline {
             -webkit-text-stroke: 1px rgba(255, 255, 255, 0.15);
             color: transparent;
         }
+
         .glass {
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
+
         ::-webkit-scrollbar {
             width: 6px;
         }
+
         ::-webkit-scrollbar-track {
             background: #050505;
         }
+
         ::-webkit-scrollbar-thumb {
             background: #222;
             border-radius: 10px;
         }
+
         ::-webkit-scrollbar-thumb:hover {
             background: var(--accent);
         }
+
         @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
         }
+
         .animate-marquee {
             animation: marquee 30s linear infinite;
         }
+
+        .animate-wave-slow {
+            animation: marquee 15s linear infinite;
+        }
+
+        .animate-wave-fast {
+            animation: marquee 10s linear infinite;
+        }
     </style>
-<script type="importmap">
+    <script type="importmap">
 {
   "imports": {
     "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
@@ -63,10 +87,12 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/index.css">
 </head>
+
 <body>
     <div id="root"></div>
-<script type="module" src="/index.tsx"></script>
+    <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>
