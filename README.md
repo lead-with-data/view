@@ -20,5 +20,6 @@ View your app in AI Studio: https://ai.studio/apps/drive/1R-OrB2sVLAJ6yFAbjZ4H2U
    `npm run dev`
 
 ## Hidden Patterns
-- **Design Thoughts**: The `DesignThoughts` component and its navbar link have been commented out in `App.tsx` and `Navbar.tsx` respectively. Uncomment them to restore the section.
+- **Sidebar**: The "Download CV" button in `ProfileSidebar.tsx` has been commented out.
+- **Hero Elements**: "Collaboration" text and "Clients" stats have been hidden in `Hero.tsx`. **Service 01 (HCI Research)** and **Service 02 (UI/UX Design)** are visible.
 

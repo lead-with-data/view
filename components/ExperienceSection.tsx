@@ -38,8 +38,7 @@ export const ExperienceSection: React.FC = () => {
   return (
     <div>
       <h2 className="text-6xl lg:text-8xl font-black tracking-tighter uppercase mb-12">
-        12 Years of <br />
-        <span className="text-white/10">Experience</span>
+        EXPERIENCE
       </h2>
 
       <div className="space-y-12">

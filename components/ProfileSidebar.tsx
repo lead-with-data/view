@@ -26,7 +26,7 @@ export const ProfileSidebar: React.FC = () => {
 
       <div className="text-center w-full">
         <h1 className="text-4xl font-extrabold mb-1 tracking-tight leading-none">MUHAMMAD AHMAD</h1>
-        <p className="text-neutral-400 font-semibold text-sm mb-6 uppercase tracking-widest">Design Engineer</p>
+        <p className="text-neutral-400 font-semibold text-sm mb-6 uppercase tracking-widest">Product Researcher</p>
 
         <div className="w-full h-[1px] bg-neutral-100 mb-6"></div>
 
@@ -40,9 +40,9 @@ export const ProfileSidebar: React.FC = () => {
           Hire Me
           <ArrowUpRight size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
         </a>
-        <button className="w-full border border-neutral-200 text-black rounded-2xl py-4 font-bold hover:bg-neutral-50 transition-all">
+        {/* <button className="w-full border border-neutral-200 text-black rounded-2xl py-4 font-bold hover:bg-neutral-50 transition-all">
           Download CV
-        </button>
+        </button> */}
       </div>
 
       <div className="flex gap-2 mt-auto">
