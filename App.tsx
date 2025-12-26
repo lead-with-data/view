@@ -6,7 +6,11 @@ import { Hero } from './components/Hero';
 import { Projects } from './components/Projects';
 import { ExperienceSection } from './components/ExperienceSection';
 import { ToolsGrid } from './components/ToolsGrid';
+import { Education } from './components/Education';
 import { DesignThoughts } from './components/DesignThoughts';
+import { Certifications } from './components/Certifications';
+import { Achievements } from './components/Achievements';
+import { Languages } from './components/Languages';
 import { ContactForm } from './components/ContactForm';
 
 const App: React.FC = () => {
@@ -14,7 +18,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'projects', 'experience', 'tools', 'thoughts', 'contact'];
+      const sections = ['home', 'projects', 'experience', 'certifications', 'tools', 'education', 'achievements', 'languages', 'thoughts', 'contact'];
       const scrollPosition = window.scrollY + 150; // Slightly larger offset for smoother activation
 
       for (const section of sections) {
@@ -44,7 +48,7 @@ const App: React.FC = () => {
       {/* Main Content Area */}
       <main className="flex-1 w-full space-y-32 pb-24 relative">
         <Navbar activeSection={activeSection} />
-        
+
         <section id="home" className="scroll-mt-32">
           <Hero />
         </section>
@@ -57,13 +61,29 @@ const App: React.FC = () => {
           <ExperienceSection />
         </section>
 
+        <section id="certifications" className="scroll-mt-32">
+          <Certifications />
+        </section>
+
         <section id="tools" className="scroll-mt-32">
           <ToolsGrid />
         </section>
 
-        <section id="thoughts" className="scroll-mt-32">
-          <DesignThoughts />
+        <section id="education" className="scroll-mt-32">
+          <Education />
         </section>
+
+        <section id="achievements" className="scroll-mt-32">
+          <Achievements />
+        </section>
+
+        <section id="languages" className="scroll-mt-32">
+          <Languages />
+        </section>
+
+        {/* <section id="thoughts" className="scroll-mt-32">
+          <DesignThoughts />
+        </section> */}
 
         <section id="contact" className="scroll-mt-32">
           <ContactForm />

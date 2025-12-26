@@ -1,0 +1,45 @@
+
+import React from 'react';
+import { Languages as LanguageIcon } from 'lucide-react';
+
+export const Languages: React.FC = () => {
+    const languages = [
+        {
+            id: 1,
+            language: "URDU",
+            level: "Native",
+        },
+        {
+            id: 2,
+            language: "ENGLISH",
+            level: "DET 130 Score", // Assuming DET 130 "app score" means the score obtained.
+        }
+    ];
+
+    return (
+        <div>
+            <div className="flex items-end justify-between mb-16">
+                <h2 className="text-5xl md:text-7xl lg:text-9xl font-black tracking-tighter uppercase leading-[0.85]">
+                    SPOKEN <br />
+                    <span className="text-outline">LANGUAGES</span>
+                </h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {languages.map((lang) => (
+                    <div key={lang.id} className="group relative overflow-hidden rounded-[2.5rem] bg-[#111] hover:bg-[#151515] transition-all cursor-pointer p-10 border border-white/5 hover:border-white/10">
+                        <div className="flex items-center gap-6 mb-4">
+                            <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-[#FF5C00] group-hover:scale-110 transition-transform">
+                                <LanguageIcon size={24} />
+                            </div>
+                            <h3 className="text-4xl font-black uppercase tracking-tighter group-hover:text-[#FF5C00] transition-colors">
+                                {lang.language}
+                            </h3>
+                        </div>
+                        <p className="text-neutral-500 font-bold uppercase text-lg tracking-[0.2em] pl-[4.5rem]">{lang.level}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+};

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Home, FolderClosed, Briefcase, Box, MessageSquare, Mail } from 'lucide-react';
+import { Home, FolderClosed, Briefcase, Box, MessageSquare, Mail, Award, Trophy, Languages as LanguageIcon, GraduationCap } from 'lucide-react';
 
 interface NavbarProps {
   activeSection: string;
@@ -11,8 +11,12 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
     { id: 'home', icon: Home, label: 'Home' },
     { id: 'projects', icon: FolderClosed, label: 'Projects' },
     { id: 'experience', icon: Briefcase, label: 'Experience' },
+    { id: 'certifications', icon: Award, label: 'Certifications' },
     { id: 'tools', icon: Box, label: 'Tools' },
-    { id: 'thoughts', icon: MessageSquare, label: 'Thoughts' },
+    { id: 'education', icon: GraduationCap, label: 'Education' },
+    { id: 'achievements', icon: Trophy, label: 'Extra' },
+    { id: 'languages', icon: LanguageIcon, label: 'Languages' },
+    // { id: 'thoughts', icon: MessageSquare, label: 'Thoughts' },
     { id: 'contact', icon: Mail, label: 'Contact' },
   ];
 
@@ -25,27 +29,26 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
             <a
               key={item.id}
               href={`#${item.id}`}
-              className={`relative p-3 rounded-full transition-all duration-500 group overflow-hidden ${
-                isActive ? 'text-black' : 'text-neutral-500 hover:text-white'
-              }`}
+              className={`relative p-3 rounded-full transition-all duration-500 group overflow-hidden ${isActive ? 'text-black' : 'text-neutral-500 hover:text-white'
+                }`}
               title={item.label}
             >
               {/* Background Glow for Active State */}
               {isActive && (
                 <div className="absolute inset-0 bg-white transition-all duration-500" />
               )}
-              
+
               {/* Subtle Hover Ring */}
               {!isActive && (
                 <div className="absolute inset-0 rounded-full border border-white/0 group-hover:border-white/10 transition-all duration-300" />
               )}
 
-              <item.icon 
-                size={18} 
-                strokeWidth={isActive ? 2.5 : 2} 
-                className="relative z-10 transition-transform duration-300 group-active:scale-90" 
+              <item.icon
+                size={18}
+                strokeWidth={isActive ? 2.5 : 2}
+                className="relative z-10 transition-transform duration-300 group-active:scale-90"
               />
-              
+
               {/* Indicator Dot for Active */}
               {isActive && (
                 <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#FF5C00] rounded-full z-20 shadow-[0_0_8px_#FF5C00]" />

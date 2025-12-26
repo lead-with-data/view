@@ -18,3 +18,7 @@ View your app in AI Studio: https://ai.studio/apps/drive/1R-OrB2sVLAJ6yFAbjZ4H2U
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+
+## Hidden Patterns
+- **Design Thoughts**: The `DesignThoughts` component and its navbar link have been commented out in `App.tsx` and `Navbar.tsx` respectively. Uncomment them to restore the section.
+
