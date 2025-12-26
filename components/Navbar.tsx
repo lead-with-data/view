@@ -25,7 +25,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
 
   return (
     <>
-      <div className="fixed top-8 right-8 z-50 md:hidden">
+      <div className="fixed top-8 right-10 z-50 md:hidden">
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="p-3 bg-white/10 backdrop-blur-md rounded-full border border-white/10 text-white"
@@ -52,8 +52,8 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
                     href={`#${item.id}`}
                     onClick={() => setIsOpen(false)}
                     className={`flex items-center gap-4 text-2xl font-bold p-4 rounded-2xl transition-all ${isActive
-                        ? 'bg-white text-black'
-                        : 'text-neutral-500 hover:text-white hover:bg-white/5'
+                      ? 'bg-white text-black'
+                      : 'text-neutral-500 hover:text-white hover:bg-white/5'
                       }`}
                   >
                     <item.icon size={24} />
