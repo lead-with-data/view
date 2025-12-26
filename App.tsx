@@ -39,7 +39,7 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col lg:flex-row max-w-[1400px] mx-auto px-4 lg:px-12 py-8 gap-8 lg:gap-16">
+    <div className="min-h-screen flex flex-col lg:flex-row max-w-[1400px] mx-auto px-4 lg:px-12 py-8 gap-8 lg:gap-16 w-full overflow-hidden lg:overflow-visible">
       {/* Fixed Sidebar for desktop, Static for mobile */}
       <aside className="w-full lg:w-[320px] lg:sticky lg:top-8 h-fit z-40">
         <ProfileSidebar />

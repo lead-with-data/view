@@ -9,8 +9,8 @@ export const Hero: React.FC = () => {
         {/* Background Scrolling Marquee */}
         <div className="flex whitespace-nowrap overflow-hidden select-none pointer-events-none opacity-[0.03] absolute -top-10 -left-10 w-[150%]">
           <div className="animate-marquee flex gap-20 py-4">
-            <span className="text-[180px] font-black uppercase">Researching rewarding user experiences</span>
-            <span className="text-[180px] font-black uppercase">Researching rewarding user experiences</span>
+            <span className="text-8xl md:text-[180px] font-black uppercase">Researching rewarding user experiences</span>
+            <span className="text-8xl md:text-[180px] font-black uppercase">Researching rewarding user experiences</span>
           </div>
         </div>
 
@@ -20,7 +20,7 @@ export const Hero: React.FC = () => {
             <span className="text-[10px] font-bold uppercase tracking-[0.2em]">Based in Punjab, Pakistan</span>
           </div>
 
-          <h2 className="text-8xl lg:text-[140px] font-black leading-[0.85] tracking-tighter uppercase mb-12">
+          <h2 className="text-5xl md:text-8xl lg:text-[140px] font-black leading-[0.85] tracking-tighter uppercase mb-12">
             PRODUCT <br />
             <span className="text-outline">RESEARCHER</span>
           </h2>
@@ -49,16 +49,16 @@ export const Hero: React.FC = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="glass group rounded-[3rem] p-10 flex flex-col justify-between aspect-square md:aspect-auto md:h-[400px] cursor-pointer hover:border-white/20 transition-all">
+        <div className="bg-white group rounded-[3rem] p-10 flex flex-col justify-between aspect-square md:aspect-auto md:h-[400px] cursor-pointer hover:border-black/10 transition-all text-black">
           <div className="flex justify-between items-start">
-            <div className="p-4 bg-white/5 rounded-2xl group-hover:bg-[#FF5C00]/20 transition-colors">
-              <Search size={32} className="text-white group-hover:text-[#FF5C00] transition-colors" />
+            <div className="p-4 bg-black/5 rounded-2xl group-hover:bg-[#FF5C00]/20 transition-colors">
+              <Search size={32} className="text-black group-hover:text-[#FF5C00] transition-colors" />
             </div>
-            <ArrowDownRight size={24} className="text-neutral-600 group-hover:text-white transition-colors" />
+            <ArrowDownRight size={24} className="text-neutral-400 group-hover:text-black transition-colors" />
           </div>
           <div>
-            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-2 block">Service 01</span>
-            <h4 className="text-4xl font-extrabold uppercase leading-none tracking-tighter">HCI <br />Research</h4>
+            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-400 mb-2 block">Service 01</span>
+            <h4 className="text-2xl md:text-4xl font-extrabold uppercase leading-none tracking-tighter">HCI <br />Research</h4>
           </div>
         </div>
 
@@ -71,7 +71,7 @@ export const Hero: React.FC = () => {
           </div>
           <div>
             <span className="text-[10px] font-black uppercase tracking-[0.3em] text-black/40 mb-2 block">Service 02</span>
-            <h4 className="text-4xl font-extrabold uppercase leading-none tracking-tighter">UI/UX <br />Design</h4>
+            <h4 className="text-2xl md:text-4xl font-extrabold uppercase leading-none tracking-tighter">UI/UX <br />Design</h4>
           </div>
         </div>
       </div>

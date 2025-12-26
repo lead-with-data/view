@@ -82,7 +82,7 @@ export const Projects: React.FC = () => {
   const ProjectSection = ({ title, outlinedTitle, projects, isSticky = false, onProjectClick }: { title: string, outlinedTitle?: string, projects: any[], isSticky?: boolean, onProjectClick?: (p: any) => void }) => (
     <div className="mb-32">
       <div className="flex items-end justify-between mb-16">
-        <h2 className="text-6xl lg:text-8xl font-black tracking-tighter uppercase leading-[0.85]">
+        <h2 className="text-4xl md:text-6xl lg:text-8xl font-black tracking-tighter uppercase leading-[0.85]">
           {title} {outlinedTitle && <br />}
           {outlinedTitle && <span className="text-outline">{outlinedTitle}</span>}
         </h2>
