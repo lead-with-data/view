@@ -2,6 +2,10 @@
 import React, { useState } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { ProjectModal } from './ProjectModal';
+import vf1 from '../assets/VF-1.png';
+import vf2 from '../assets/VF-2.png';
+import vf3 from '../assets/VF-3.png';
+import renalSenseImg from '../assets/RenalSense.png';
 
 export const Projects: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<any>(null);
@@ -41,6 +45,40 @@ export const Projects: React.FC = () => {
       ],
       figmaLink: 'https://www.figma.com', // Placeholder
       description: 'Visual identity system and user interface design for a next-generation tech startup.'
+    }
+  ];
+
+  const devProjects = [
+    {
+      id: '4',
+      title: 'Visual Forensic',
+      type: 'AI Analysis Tool',
+      tags: ['Gemini', 'Multi-Agent', 'Heatmaps'],
+      image: vf1,
+      images: [vf1, vf2, vf3],
+      githubLink: 'https://lead-with-data.github.io/Visual-Forensics/',
+      description: 'AI Gemini-based multi-agent council which look att interface and make a detailed report on heatmaps AB testing and other.'
+    },
+    {
+      id: '5',
+      title: 'Renal Sense',
+      type: 'Healthcare AI Platform',
+      tags: ['GenAI', 'RAG', 'Healthcare'],
+      image: renalSenseImg,
+      images: [renalSenseImg],
+      githubLink: 'https://github.com/ahmad-bsds/RenalSense',
+      description: 'Developed Renal Sense, an AI-powered platform for kidney health monitoring and patient support. Integrated a generative AI chatbot for personalized health insights.'
+    },
+    {
+      id: '6',
+      title: 'Look Away',
+      type: 'Health & Productivity Tool',
+      tags: ['Health', 'Automation', 'Analytics'],
+      image: 'https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&q=80&w=800',
+      images: [
+        'https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&q=80&w=800'
+      ],
+      description: 'A project which traces your screentime and at every 20 minutes it adds 20 second screen filter to look away for eyes health, also gives you the insights.'
     }
   ];
 
@@ -146,6 +184,13 @@ export const Projects: React.FC = () => {
         outlinedTitle="WORK"
         projects={infoProjects}
         onProjectClick={setSelectedProject}
+      />
+      <ProjectSection
+        title="DEVELOPMENT"
+        outlinedTitle="WORK"
+        projects={devProjects}
+        onProjectClick={setSelectedProject}
+        isSticky={true}
       />
       <ProjectSection
         title="DATA SCIENCE"

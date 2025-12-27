@@ -4,7 +4,7 @@ import { BrainCircuit, Bot, PieChart, BarChart3, Code2, Users, Palette, Cloud, T
 
 export const ToolsGrid: React.FC = () => {
   const stack = [
-    { name: 'Design', category: 'Figma, Canva (Designed)', icon: Palette },
+    { name: 'Design', category: 'Figma, Canva, Adobe Illustrator, Affinity (Designed)', icon: Palette },
     { name: 'Statistics', category: 'Descriptive and Inferential Statistics (Academic)', icon: PieChart },
     { name: 'Visualization', category: 'Tableau, Power BI, Looker, Excel, KPIs, Data Storytelling (Olist Analytics)', icon: BarChart3 },
     { name: 'Machine Learning', category: 'PyTorch, Scikit-learn, Deep Learning (Toy GPT)', icon: Bot },

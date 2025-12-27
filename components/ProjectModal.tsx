@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ExternalLink, Figma, ChevronLeft, ChevronRight } from 'lucide-react';
+import { X, ExternalLink, Figma, ChevronLeft, ChevronRight, Github } from 'lucide-react';
 
 interface Project {
     id: string;
@@ -11,6 +11,7 @@ interface Project {
     images?: string[]; // Array of images for carousel
     link?: string;
     figmaLink?: string;
+    githubLink?: string;
     description?: string;
 }
 
@@ -157,6 +158,18 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                                             >
                                                 <Figma size={24} className="group-hover:scale-110 transition-transform" />
                                                 <span className="font-bold">Open in Figma</span>
+                                            </a>
+                                        )}
+
+                                        {project.githubLink && (
+                                            <a
+                                                href={project.githubLink}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="w-full bg-[#1E1E1E] hover:bg-[#FF5C00] text-white border border-white/10 rounded-2xl p-4 flex items-center justify-center gap-3 transition-colors group"
+                                            >
+                                                <Github size={24} className="group-hover:scale-110 transition-transform" />
+                                                <span className="font-bold">Open in GitHub</span>
                                             </a>
                                         )}
 
