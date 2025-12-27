@@ -6,6 +6,9 @@ import vf1 from '../assets/VF-1.png';
 import vf2 from '../assets/VF-2.png';
 import vf3 from '../assets/VF-3.png';
 import renalSenseImg from '../assets/RenalSense.png';
+import vg1 from '../assets/VG-1.png';
+import vg2 from '../assets/VG-2.png';
+import vg3 from '../assets/VG-3.png';
 
 export const Projects: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<any>(null);
@@ -71,13 +74,12 @@ export const Projects: React.FC = () => {
     },
     {
       id: '6',
-      title: 'Look Away',
+      title: 'VisionGuard',
       type: 'Health & Productivity Tool',
       tags: ['Health', 'Automation', 'Analytics'],
-      image: 'https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&q=80&w=800',
-      images: [
-        'https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&q=80&w=800'
-      ],
+      image: vg1,
+      images: [vg1, vg2, vg3],
+      githubLink: 'https://github.com/lead-with-data/VisionGuard-',
       description: 'A project which traces your screentime and at every 20 minutes it adds 20 second screen filter to look away for eyes health, also gives you the insights.'
     }
   ];
