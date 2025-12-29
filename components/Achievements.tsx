@@ -43,21 +43,21 @@ export const Achievements: React.FC = () => {
             id: 6,
             title: "Hack Nation",
             organization: "Google & OpenAI & MIT",
-            date: "2026",
+            date: "*",
             description: "Participant in the Hack Nation hackathon supported by Google, OpenAI, and MIT."
         },
         {
             id: 7,
             title: "DeepMind Gemini 3 Hack",
             organization: "Google DeepMind",
-            date: "2026",
+            date: "*",
             description: "Competed in the Gemini 3 Hackathon leveraging advanced AI models."
         },
         {
             id: 8,
             title: "Google Tunix Competition",
             organization: "Google",
-            date: "2026",
+            date: "*",
             description: "Participated in the Google Tunix Competition."
         }
     ];

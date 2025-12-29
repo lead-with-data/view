@@ -9,26 +9,41 @@ import renalSenseImg from '../assets/RenalSense.png';
 import vg1 from '../assets/VG-1.png';
 import vg2 from '../assets/VG-2.png';
 import vg3 from '../assets/VG-3.png';
+import lumina1 from '../assets/Lumina_1.png';
+import lumina2 from '../assets/Lumina_2.png';
+import comingSoon from '../assets/coming_soon.png';
 
 export const Projects: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<any>(null);
 
   const designProjects = [
     {
-      id: '1',
-      title: 'Aura Network',
-      type: 'Case Study',
-      tags: ['Branding', 'Web3'],
-      image: 'https://images.unsplash.com/photo-1614850523296-e8c0d9936bb8?auto=format&fit=crop&q=80&w=800',
-      images: [
-        'https://images.unsplash.com/photo-1614850523296-e8c0d9936bb8?auto=format&fit=crop&q=80&w=800', // Main
-        'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=800', // Abstract Dark
-        'https://images.unsplash.com/photo-1634128221889-b2a60322c363?auto=format&fit=crop&q=80&w=800', // 3D Shapes
-        'https://images.unsplash.com/photo-1558655146-d09347e0b7a9?auto=format&fit=crop&q=80&w=800', // Minimalist
-        'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800'  // Tech
-      ],
-      figmaLink: 'https://www.figma.com', // Placeholder
-      description: 'A complete brand identity and web design case study for a Web3 infrastructure project.'
+      id: 'lumina-coming-soon',
+      title: 'LUMINA FIGMA Design',
+      type: 'UI Design',
+      tags: ['Figma', 'UI/UX'],
+      image: comingSoon,
+      images: [comingSoon],
+      description: 'Coming soon',
+      clickable: false
+    },
+    {
+      id: 'lumina-graphics',
+      title: 'AI Graphics designing',
+      type: 'Graphic Design',
+      tags: ['Gemini', 'Graphics', 'AI'],
+      image: lumina1,
+      images: [lumina1],
+      description: 'Lumina is hypothetical video generation platform for which i have created two graphics using gemini nano banana.'
+    },
+    {
+      id: 'lumina-visuals',
+      title: 'Lumina Visuals',
+      type: 'Graphic Design',
+      tags: ['Graphics', 'AI'],
+      image: lumina2,
+      description: 'Design for Lumina platform.',
+      clickable: true
     }
   ];
 
@@ -130,17 +145,17 @@ export const Projects: React.FC = () => {
 
       <div className="space-y-6">
         {projects.map((p, index) => {
-          const isClickable = !!onProjectClick;
-          const Component = isClickable ? 'div' : 'a';
+          const isClickable = !!onProjectClick && p.clickable !== false;
+          const Component = isClickable ? 'div' : (p.clickable === false ? 'div' : 'a');
           const props = isClickable
             ? { onClick: () => onProjectClick(p) }
-            : { href: p.link || '#', target: p.link ? "_blank" : undefined, rel: p.link ? "noopener noreferrer" : undefined };
+            : (p.clickable === false ? {} : { href: p.link || '#', target: p.link ? "_blank" : undefined, rel: p.link ? "noopener noreferrer" : undefined });
 
           return (
             <Component
               key={p.id}
               {...props}
-              className={`group relative overflow-hidden rounded-[2.5rem] bg-[#111] hover:bg-[#151515] transition-all cursor-pointer p-6 md:p-10 flex flex-col md:flex-row gap-8 items-center border border-white/5 hover:border-white/10 ${isSticky ? 'sticky' : ''} block`}
+              className={`group relative overflow-hidden rounded-[2.5rem] bg-[#111] hover:bg-[#151515] transition-all ${isClickable ? 'cursor-pointer' : (p.clickable === false ? 'cursor-default opacity-80' : 'cursor-pointer')} p-6 md:p-10 flex flex-col md:flex-row gap-8 items-center border border-white/5 hover:border-white/10 ${isSticky ? 'sticky' : ''} block`}
               style={{
                 top: isSticky ? `${index * 4 + 8}rem` : undefined,
                 zIndex: index
@@ -180,13 +195,14 @@ export const Projects: React.FC = () => {
         outlinedTitle="WORKS"
         projects={designProjects}
         onProjectClick={setSelectedProject}
+        isSticky={true}
       />
-      <ProjectSection
+      {/* <ProjectSection
         title="INFORMATION DESIGN"
         outlinedTitle="WORK"
         projects={infoProjects}
         onProjectClick={setSelectedProject}
-      />
+      /> */}
       <ProjectSection
         title="DEVELOPMENT"
         outlinedTitle="WORK"

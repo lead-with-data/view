@@ -22,4 +22,5 @@ View your app in AI Studio: https://ai.studio/apps/drive/1R-OrB2sVLAJ6yFAbjZ4H2U
 ## Hidden Patterns
 - **Sidebar**: The "Download CV" button in `ProfileSidebar.tsx` has been commented out.
 - **Hero Elements**: "Collaboration" text and "Clients" stats have been hidden in `Hero.tsx`. **Service 01 (HCI Research)** and **Service 02 (UI/UX Design)** are visible.
+- **Projects**: The "Information Design" section has been commented out in `Projects.tsx`.
 
