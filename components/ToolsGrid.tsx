@@ -10,7 +10,7 @@ export const ToolsGrid: React.FC = () => {
     { name: 'Machine Learning', category: 'PyTorch, Scikit-learn, Deep Learning (Toy GPT)', icon: Bot },
     { name: 'Generative AI', category: 'LangChain, LangGraph, Prompt Engineering (Renal Sense)', icon: BrainCircuit },
     { name: 'Cloud & Data', category: 'AWS, Snowflake, Google Cloud, Databases, Data Warehousing, Databricks (Familiar)', icon: Cloud },
-    { name: 'Tools', category: 'Git/GitHub, Docker, Jupyter Notebook, VS Code, PyCharm, Google Colab, Vercel (Used)', icon: Terminal },
+    { name: 'Tools', category: 'Git/GitHub, Docker, Jupyter Notebook, VS Code, PyCharm, Google Colab, Vercel, Gemini AI Studio, Claude, DeepSeek, OpenAI, Gemini, Codex, Cursor, Qwen AI Assistant (Used)', icon: Terminal },
     { name: 'Languages', category: 'Python, SQL, R, HTML/CSS (Used)', icon: Code2 },
     { name: 'Soft Skills', category: 'Collaboration & Communication, Analytical & Critical Thinking, Problem-Solving, Adaptability (Possess)', icon: Users },
   ];

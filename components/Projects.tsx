@@ -12,6 +12,7 @@ import vg3 from '../assets/VG-3.png';
 import lumina1 from '../assets/Lumina_1.png';
 import lumina2 from '../assets/Lumina_2.png';
 import comingSoon from '../assets/coming_soon.png';
+import aether from '../assets/aether.png';
 
 export const Projects: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<any>(null);
@@ -19,13 +20,15 @@ export const Projects: React.FC = () => {
   const designProjects = [
     {
       id: 'lumina-coming-soon',
-      title: 'LUMINA FIGMA Design',
+      title: 'AETHER $ VOID UI/UX',
       type: 'UI Design',
       tags: ['Figma', 'UI/UX'],
-      image: comingSoon,
-      images: [comingSoon],
-      description: 'Coming soon',
-      clickable: false
+      image: aether,
+      images: [aether],
+      displayImage: aether,
+      description: 'Lumina is hypothetical video generation platform for which i have created two graphics using gemini nano banana.',
+      clickable: true,
+      figmaLink: 'https://www.figma.com/design/Xhgi8iDu2aS6abnCd2Gu8y/aether---void?node-id=64-478&t=uBNpK98utjoQY4Rc-1'
     },
     {
       id: 'lumina-graphics',
